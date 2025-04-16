@@ -1,0 +1,25 @@
+{
+	"BUILD_DIR" : "C:/Users/Omar Eltoutongy/Documents/AirlineSystem/build/Desktop_Qt_6_8_2_MinGW_64_bit-Release/AirlineSystem_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/Omar Eltoutongy/Documents/AirlineSystem/build/Desktop_Qt_6_8_2_MinGW_64_bit-Release",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/Omar Eltoutongy/Documents/AirlineSystem/build/Desktop_Qt_6_8_2_MinGW_64_bit-Release",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/Omar Eltoutongy/Documents/AirlineSystem",
+	"CMAKE_SOURCE_DIR" : "C:/Users/Omar Eltoutongy/Documents/AirlineSystem",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "MinGW Makefiles",
+	"INCLUDE_DIR" : "C:/Users/Omar Eltoutongy/Documents/AirlineSystem/build/Desktop_Qt_6_8_2_MinGW_64_bit-Release/AirlineSystem_autogen/include",
+	"INPUTS" : 
+	[
+		"C:/Users/Omar Eltoutongy/Documents/AirlineSystem/resources/airplane.ico"
+	],
+	"LOCK_FILE" : "C:/Users/Omar Eltoutongy/Documents/AirlineSystem/build/Desktop_Qt_6_8_2_MinGW_64_bit-Release/CMakeFiles/AirlineSystem_autogen.dir/AutoRcc_Resources_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "Resources" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_Resources.cpp",
+	"RCC_EXECUTABLE" : "C:/Qt/6.8.2/mingw_64/bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "C:/Users/Omar Eltoutongy/Documents/AirlineSystem/build/Desktop_Qt_6_8_2_MinGW_64_bit-Release/CMakeFiles/AirlineSystem_autogen.dir/AutoRcc_Resources_EWIEGA46WW_Used.txt",
+	"SOURCE" : "C:/Users/Omar Eltoutongy/Documents/AirlineSystem/Resources.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

@@ -1,0 +1,154 @@
+{
+    "reservations": [
+        {
+            "departureTime": "2023-12-15 08:30",
+            "destination": "Los Angeles (LAX)",
+            "flightNumber": "AA123",
+            "origin": "New York (JFK)",
+            "passengerID": "U003",
+            "reservationID": "R001",
+            "seatNumber": "12A",
+            "status": "CONFIRMED"
+        },
+        {
+            "departureTime": "2023-12-20 09:00",
+            "destination": "Paris (CDG)",
+            "flightNumber": "BA456",
+            "origin": "London (LHR)",
+            "passengerID": "U004",
+            "reservationID": "R002",
+            "seatNumber": "15B",
+            "status": "PENDING"
+        },
+        {
+            "departureTime": "2023-12-18 10:15",
+            "destination": "Chicago (ORD)",
+            "flightNumber": "DL789",
+            "origin": "Atlanta (ATL)",
+            "passengerID": "U007",
+            "reservationID": "R003",
+            "seatNumber": "8C",
+            "status": "CONFIRMED"
+        },
+        {
+            "departureTime": "2023-12-22 07:00",
+            "destination": "Seattle (SEA)",
+            "flightNumber": "UA101",
+            "origin": "San Francisco (SFO)",
+            "passengerID": "U008",
+            "reservationID": "R004",
+            "seatNumber": "10D",
+            "status": "CANCELLED"
+        },
+        {
+            "departureTime": "2023-12-25 12:00",
+            "destination": "Denver (DEN)",
+            "flightNumber": "SW202",
+            "origin": "Dallas (DFW)",
+            "passengerID": "U003",
+            "reservationID": "R005",
+            "seatNumber": "5A",
+            "status": "CONFIRMED"
+        },
+        {
+            "departureTime": "2023-12-28 08:45",
+            "destination": "Berlin (BER)",
+            "flightNumber": "AF303",
+            "origin": "Paris (CDG)",
+            "passengerID": "U004",
+            "reservationID": "R006",
+            "seatNumber": "20F",
+            "status": "PENDING"
+        },
+        {
+            "departureTime": "2023-12-30 11:00",
+            "destination": "Munich (MUC)",
+            "flightNumber": "LH404",
+            "origin": "Frankfurt (FRA)",
+            "passengerID": "U007",
+            "reservationID": "R007",
+            "seatNumber": "14E",
+            "status": "CONFIRMED"
+        },
+        {
+            "departureTime": "2024-01-05 06:30",
+            "destination": "Melbourne (MEL)",
+            "flightNumber": "QF505",
+            "origin": "Sydney (SYD)",
+            "passengerID": "U008",
+            "reservationID": "R008",
+            "seatNumber": "3B",
+            "status": "CANCELLED"
+        },
+        {
+            "departureTime": "2024-01-10 14:00",
+            "destination": "London (LHR)",
+            "flightNumber": "EK606",
+            "origin": "Dubai (DXB)",
+            "passengerID": "U003",
+            "reservationID": "R009",
+            "seatNumber": "7C",
+            "status": "CONFIRMED"
+        },
+        {
+            "departureTime": "2024-01-15 09:00",
+            "destination": "Tokyo (NRT)",
+            "flightNumber": "SQ707",
+            "origin": "Singapore (SIN)",
+            "passengerID": "U004",
+            "reservationID": "R010",
+            "seatNumber": "18A",
+            "status": "CONFIRMED"
+        },
+        {
+            "departureTime": "2023-12-15 08:30",
+            "destination": "Los Angeles (LAX)",
+            "flightNumber": "AA123",
+            "origin": "New York (JFK)",
+            "passengerID": "",
+            "reservationID": "R11",
+            "seatNumber": "12A",
+            "status": "PENDING"
+        },
+        {
+            "departureTime": "2023-12-20 09:00",
+            "destination": "Paris (CDG)",
+            "flightNumber": "BA456",
+            "origin": "London (LHR)",
+            "passengerID": "U003",
+            "reservationID": "R12",
+            "seatNumber": "F3",
+            "status": "PENDING"
+        },
+        {
+            "departureTime": "2023-12-20 09:00",
+            "destination": "Paris (CDG)",
+            "flightNumber": "BA456",
+            "origin": "London (LHR)",
+            "passengerID": "U003",
+            "reservationID": "R13",
+            "seatNumber": "6D",
+            "status": "CANCELLED"
+        },
+        {
+            "departureTime": "2023-12-22 07:00",
+            "destination": "Seattle (SEA)",
+            "flightNumber": "UA101",
+            "origin": "San Francisco (SFO)",
+            "passengerID": "U003",
+            "reservationID": "R14",
+            "seatNumber": "F3",
+            "status": "PENDING"
+        },
+        {
+            "departureTime": "2023-12-22 07:00",
+            "destination": "Seattle (SEA)",
+            "flightNumber": "UA101",
+            "origin": "San Francisco (SFO)",
+            "passengerID": "U003",
+            "reservationID": "R15",
+            "seatNumber": "F4",
+            "status": "CONFIRMED"
+        }
+    ]
+}

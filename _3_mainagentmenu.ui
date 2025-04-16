@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainAgentMenu</class>
+ <widget class="QDialog" name="mainAgentMenu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Airline System - Agent Dashboard</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+        QDialog {
+          background-color: #f5f7fa;
+          font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        QTabWidget::pane {
+          border: none;
+        }
+        QTabBar::tab {
+          background: #e1e5eb;
+          color: #2c3e50;
+          padding: 10px 20px;
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px;
+          margin-right: 2px;
+          font-weight: 500;
+          min-width: 120px;
+        }
+        QTabBar::tab:selected {
+          background: white;
+          border-bottom: 3px solid #3498db;
+          color: #3498db;
+        }
+        QGroupBox {
+          border: 1px solid #d1d9e6;
+          border-radius: 8px;
+          margin: 10px;
+          padding: 15px;
+          background-color: white;
+        }
+        QPushButton {
+          background-color: #3498db;
+          color: white;
+          border: none;
+          padding: 10px 16px;
+          border-radius: 6px;
+          margin: 8px;
+          min-width: 180px;
+        }
+        QPushButton:hover {
+          background-color: #2980b9;
+        }
+        QPushButton#logoutButton {
+          background-color: #e74c3c;
+        }
+        QPushButton#logoutButton:hover {
+          background-color: #c0392b;
+        }
+        QLineEdit {
+          padding: 8px;
+          border: 1px solid #d1d9e6;
+          border-radius: 4px;
+        }
+        QTableWidget {
+          border: 1px solid #d1d9e6;
+          background: white;
+        }
+        QHeaderView::section {
+          background-color: #3498db;
+          color: white;
+          padding: 6px;
+        }
+        QLabel#headerLabel {
+          font-size: 24px;
+          font-weight: bold;
+          qproperty-alignment: AlignCenter;
+        }
+      </string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item>
+    <widget class="QLabel" name="headerLabel">
+     <property name="text">
+      <string>Agent Dashboard</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="searchTab">
+      <attribute name="title">
+       <string>🔍 Search Flights</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="searchLayout">
+       <item>
+        <widget class="QGroupBox" name="searchGroup">
+         <layout class="QFormLayout" name="searchForm">
+          <item row="0" column="0">
+           <widget class="QLabel" name="originLabel">
+            <property name="text">
+             <string>Origin:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="originInput">
+            <property name="placeholderText">
+             <string>Enter departure city</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="destLabel">
+            <property name="text">
+             <string>Destination:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="destInput">
+            <property name="placeholderText">
+             <string>Enter arrival city</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="dateLabel">
+            <property name="text">
+             <string>Date:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="dateInput">
+            <property name="placeholderText">
+             <string>YYYY-MM-DD HH:MM</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="searchButton">
+         <property name="text">
+          <string>Search Flights</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="resultsGroup">
+         <property name="title">
+          <string>Available Flights</string>
+         </property>
+         <layout class="QVBoxLayout" name="resultsLayout">
+          <item>
+           <widget class="QTableWidget" name="flightsTable">
+            <property name="rowCount">
+             <number>0</number>
+            </property>
+            <property name="columnCount">
+             <number>5</number>
+            </property>
+            <column>
+             <property name="text">
+              <string>Flight #</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Departure</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Arrival</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Price</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Seats</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="bookTab">
+      <attribute name="title">
+       <string>✈️ Book Flight</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="bookLayout">
+       <item>
+        <widget class="QGroupBox" name="passengerGroup">
+         <property name="title">
+          <string>Passenger Details</string>
+         </property>
+         <layout class="QFormLayout" name="passengerForm">
+          <item row="0" column="0">
+           <widget class="QLabel" name="passengerLabel">
+            <property name="text">
+             <string>Passenger Username:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="passengerInput">
+            <property name="placeholderText">
+             <string>Enter passenger username</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="flightGroup">
+         <property name="title">
+          <string>Flight Details</string>
+         </property>
+         <layout class="QFormLayout" name="flightForm">
+          <item row="0" column="0">
+           <widget class="QLabel" name="flightNumLabel">
+            <property name="text">
+             <string>Flight Number:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="flightNumInput">
+            <property name="placeholderText">
+             <string>Enter flight number</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="seatLabel">
+            <property name="text">
+             <string>Seat Number:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="seatInput">
+            <property name="placeholderText">
+             <string>e.g., 12A, 7C</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="paymentGroup">
+         <property name="title">
+          <string>Payment Method</string>
+         </property>
+         <layout class="QHBoxLayout" name="paymentLayout">
+          <item>
+           <widget class="QRadioButton" name="walletRadio">
+            <property name="text">
+             <string>Wallet</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="paypalRadio">
+            <property name="text">
+             <string>PayPal</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="creditRadio">
+            <property name="text">
+             <string>Credit Card</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bookButton">
+         <property name="text">
+          <string>Confirm Booking</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="modifyTab">
+      <attribute name="title">
+       <string>✏️ Modify</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="modifyLayout">
+       <item>
+        <widget class="QGroupBox" name="modifySearchGroup">
+         <property name="title">
+          <string>Search Reservations</string>
+         </property>
+         <layout class="QFormLayout" name="modifySearchForm">
+          <item row="0" column="0">
+           <widget class="QLabel" name="modifyUserLabel">
+            <property name="text">
+             <string>Passenger Username:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="modifyUserInput">
+            <property name="placeholderText">
+             <string>Enter passenger username</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="modifySearchButton">
+         <property name="text">
+          <string>Search Reservations</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="modifyResultsGroup">
+         <property name="title">
+          <string>Reservations</string>
+         </property>
+         <layout class="QVBoxLayout" name="modifyResultsLayout">
+          <item>
+           <widget class="QTableWidget" name="modifyTable">
+            <property name="rowCount">
+             <number>0</number>
+            </property>
+            <property name="columnCount">
+             <number>6</number>
+            </property>
+            <column>
+             <property name="text">
+              <string>Reservation ID</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Flight #</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Passenger</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Seat</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Status</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Route</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="modifyActionGroup">
+         <property name="title">
+          <string>Modify Seat</string>
+         </property>
+         <layout class="QFormLayout" name="modifyActionForm">
+          <item row="0" column="0">
+           <widget class="QLabel" name="newSeatLabel">
+            <property name="text">
+             <string>New Seat Number:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="newSeatInput">
+            <property name="placeholderText">
+             <string>Enter new seat number</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="modifyButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Update Seat</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="cancelTab">
+      <attribute name="title">
+       <string>❌ Cancel</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="cancelLayout">
+       <item>
+        <widget class="QGroupBox" name="cancelSearchGroup">
+         <property name="title">
+          <string>Search Reservations</string>
+         </property>
+         <layout class="QFormLayout" name="cancelSearchForm">
+          <item row="0" column="0">
+           <widget class="QLabel" name="cancelUserLabel">
+            <property name="text">
+             <string>Passenger Username:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="cancelUserInput">
+            <property name="placeholderText">
+             <string>Enter passenger username</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="cancelSearchButton">
+         <property name="text">
+          <string>Search Reservations</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="cancelResultsGroup">
+         <property name="title">
+          <string>Reservations</string>
+         </property>
+         <layout class="QVBoxLayout" name="cancelResultsLayout">
+          <item>
+           <widget class="QTableWidget" name="cancelTable">
+            <property name="rowCount">
+             <number>0</number>
+            </property>
+            <property name="columnCount">
+             <number>6</number>
+            </property>
+            <column>
+             <property name="text">
+              <string>Reservation ID</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Flight #</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Passenger</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Seat</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Status</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Route</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="cancelButton">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Cancel Reservation</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="logoutButton">
+     <property name="text">
+      <string>Logout</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>logoutButton</sender>
+   <signal>clicked()</signal>
+   <receiver>mainAgentMenu</receiver>
+   <slot>deleteLater()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,64 @@
+{
+    "flight_attendants": [
+        {
+            "ID": "FA001",
+            "assignedFlight": "",
+            "name": "Alice Johnson",
+            "status": "FREE"
+        },
+        {
+            "ID": "FA002",
+            "assignedFlight": "",
+            "name": "Bob Brown",
+            "status": "FREE"
+        },
+        {
+            "ID": "FA003",
+            "assignedFlight": "BA456",
+            "name": "Charlie Davis",
+            "status": "BUSY"
+        },
+        {
+            "ID": "FA004",
+            "assignedFlight": "DL789",
+            "name": "Diana Evans",
+            "status": "BUSY"
+        },
+        {
+            "ID": "FA005",
+            "assignedFlight": "DL789",
+            "name": "Ethan Harris",
+            "status": "BUSY"
+        },
+        {
+            "ID": "FA006",
+            "assignedFlight": "UA101",
+            "name": "Fiona Clark",
+            "status": "BUSY"
+        },
+        {
+            "ID": "FA007",
+            "assignedFlight": "SW202",
+            "name": "George Lewis",
+            "status": "BUSY"
+        },
+        {
+            "ID": "FA008",
+            "assignedFlight": "SW202",
+            "name": "Hannah Walker",
+            "status": "BUSY"
+        },
+        {
+            "ID": "FA009",
+            "assignedFlight": "AA123",
+            "name": "Ian Hall",
+            "status": "BUSY"
+        },
+        {
+            "ID": "FA010",
+            "assignedFlight": "AA123",
+            "name": "Julia Young",
+            "status": "BUSY"
+        }
+    ]
+}

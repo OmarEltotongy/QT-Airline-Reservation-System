@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>mainAdminMenu</class>
+  <widget class="QDialog" name="mainAdminMenu">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>700</width>
+        <height>600</height>
+      </rect>
+    </property>
+    <property name="minimumSize">
+      <size>
+        <width>700</width>
+        <height>600</height>
+      </size>
+    </property>
+    <property name="windowTitle">
+      <string>Airline System - Admin Dashboard</string>
+    </property>
+    <property name="styleSheet">
+      <string notr="true">QDialog {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+QGroupBox {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 8px;
+    color: #3498db;
+}
+QPushButton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 200px;
+    text-align: left;
+    padding-left: 30px;
+}
+QPushButton:hover {
+    background-color: #2980b9;
+}
+QPushButton:pressed {
+    background-color: #2472a4;
+}
+QPushButton#LogoutBtn {
+    background-color: #e74c3c;
+    margin: 20px;
+    text-align: center;
+    padding-left: 20px;
+}
+QPushButton#LogoutBtn:hover {
+    background-color: #c0392b;
+}
+QLabel#headerLabel {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    qproperty-alignment: AlignCenter;
+}</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+        <widget class="QLabel" name="headerLabel">
+          <property name="styleSheet">
+            <string notr="true">margin-top: 20px; margin-bottom: 10px;</string>
+          </property>
+          <property name="text">
+            <string>Admin Dashboard</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+            <string>Management Options</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+              <widget class="QPushButton" name="mangeFlightsBtn">
+                <property name="styleSheet">
+                  <string notr="true">padding-left: 30px;</string>
+                </property>
+                <property name="text">
+                  <string>✈ Manage Flights</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QPushButton" name="mangeAircraftsBtn">
+                <property name="text">
+                  <string>🛩 Manage Aircraft</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QPushButton" name="mangeUsersBtn">
+                <property name="text">
+                  <string>👥 Manage Users</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QPushButton" name="generateReportsBtn">
+                <property name="text">
+                  <string>📊 Generate Reports</string>
+                </property>
+              </widget>
+            </item>
+          </layout>
+        </widget>
+      </item>
+      <item>
+        <widget class="QPushButton" name="LogoutBtn">
+          <property name="text">
+            <string>Logout</string>
+          </property>
+        </widget>
+      </item>
+    </layout>
+  </widget>
+  <resources/>
+  <connections>
+    <connection>
+      <sender>LogoutBtn</sender>
+      <signal>clicked()</signal>
+      <receiver>mainAdminMenu</receiver>
+      <slot>deleteLater()</slot>
+      <hints>
+        <hint type="sourcelabel">
+          <x>349</x>
+          <y>547</y>
+        </hint>
+        <hint type="destinationlabel">
+          <x>349</x>
+          <y>299</y>
+        </hint>
+      </hints>
+    </connection>
+  </connections>
+</ui>

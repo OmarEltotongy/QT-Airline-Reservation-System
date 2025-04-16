@@ -1,0 +1,100 @@
+{
+    "users": [
+        {
+            "password": "omar",
+            "role": "ADMIN",
+            "userID": "U000",
+            "username": "omar_admin"
+        },
+        {
+            "password": "admin123",
+            "role": "ADMIN",
+            "userID": "U001",
+            "username": "admin1"
+        },
+        {
+            "password": "omar",
+            "role": "BOOKING_AGENT",
+            "userID": "U002",
+            "username": "omar_agent"
+        },
+        {
+            "contactInfo": "passenger1@example.com",
+            "creditCard": {
+                "cardNumber": "4111111111111111",
+                "cvv": "123",
+                "expiryDate": "27/05"
+            },
+            "loyaltyPoints": 71,
+            "password": "omar",
+            "paypalAccount": "mike.paypal@example.com",
+            "role": "PASSENGER",
+            "userID": "U003",
+            "username": "omar_pass",
+            "wallet": 730.0
+        },
+        {
+            "contactInfo": "passenger2@example.com",
+            "creditCard": {
+                "cardNumber": "5555555555554444",
+                "cvv": "456",
+                "expiryDate": "06/26"
+            },
+            "loyaltyPoints": 50,
+            "password": "pass456",
+            "paypalAccount": "john.paypal@example.com",
+            "role": "PASSENGER",
+            "userID": "U004",
+            "username": "passenger2",
+            "wallet": 750.0
+        },
+        {
+            "password": "admin456",
+            "role": "ADMIN",
+            "userID": "U005",
+            "username": "admin2"
+        },
+        {
+            "password": "agent456",
+            "role": "BOOKING_AGENT",
+            "userID": "U006",
+            "username": "agent2"
+        },
+        {
+            "contactInfo": "passenger3@example.com",
+            "creditCard": {
+                "cardNumber": "378282246310005",
+                "cvv": "789",
+                "expiryDate": "09/24"
+            },
+            "loyaltyPoints": 200,
+            "password": "pass789",
+            "paypalAccount": "sara.paypal@example.com",
+            "role": "PASSENGER",
+            "userID": "U007",
+            "username": "passenger3",
+            "wallet": 1200.0
+        },
+        {
+            "contactInfo": "passenger4@example.com",
+            "creditCard": {
+                "cardNumber": "6011111111111117",
+                "cvv": "321",
+                "expiryDate": "03/27"
+            },
+            "loyaltyPoints": 75,
+            "password": "pass101",
+            "paypalAccount": "emma.paypal@example.com",
+            "role": "PASSENGER",
+            "userID": "U008",
+            "username": "passenger4",
+            "wallet": 900.0
+        },
+        {
+            "password": "admin789",
+            "role": "ADMIN",
+            "userID": "U010",
+            "username": "admar2"
+        }
+    ]
+}
