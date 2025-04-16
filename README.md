@@ -113,9 +113,6 @@ make
 - Automatic file creation on first run
 - Modular data handlers for each entity type
 
-## 📜 License
-MIT License - See included LICENSE file
-
 ## 📧 Contact
 For support or contributions, please contact:
 - Omar Eltoutongy on my [linkedin](https://www.linkedin.com/in/omar-eltoutongy/) 
