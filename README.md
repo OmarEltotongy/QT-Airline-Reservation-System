@@ -1,7 +1,4 @@
 # ✈️ QT Airline Reservation System
-
-![Application Logo](resources/airplane.png)
-
 A comprehensive airline management system with GUI interface built using QT framework, featuring role-based access, flight/reservation management, and JSON data persistence.
 
 ## 📂 Project Structure
